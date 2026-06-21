@@ -4,7 +4,7 @@ const Dashboard = {
 
       <!-- Sidebar -->
       <aside class="fixed left-0 top-0 h-screen w-64 bg-blue-800 text-white flex flex-col py-6 px-4">
-        <h1 class="text-lg font-bold mb-8 text-center">📦 E-Inventory</h1>
+        <h1 class="text-lg font-bold mb-8 text-center">📦 Data Warung Ari</h1>
         <nav class="flex flex-col gap-2 flex-1">
           <router-link to="/dashboard" class="px-4 py-2 rounded-lg hover:bg-blue-700">🏠 Dashboard</router-link>
           <router-link to="/barang"    class="px-4 py-2 rounded-lg hover:bg-blue-700">📦 Barang</router-link>
@@ -22,127 +22,181 @@ const Dashboard = {
         <h2 class="text-2xl font-bold text-gray-800 mb-2">Selamat datang, {{ nama }}!</h2>
         <p class="text-gray-500 mb-8">Ringkasan kondisi inventaris warung hari ini.</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          <div class="bg-white rounded-xl shadow p-6">
-            <p class="text-gray-500 text-sm">📦 Total Barang</p>
-            <p class="text-3xl font-bold text-blue-600 mt-2">
-              {{ totalBarang }}
-            </p>
+        <!-- Statistik -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+
+          <!-- Total Barang -->
+          <div class="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center text-white text-2xl">
+              📦
+            </div>
+            <div>
+              <p class="text-blue-500 text-sm">Total Barang</p>
+              <p class="text-4xl font-bold text-blue-600">{{ totalBarang }}</p>
+            </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow p-6">
-            <p class="text-gray-500 text-sm">🏷️ Total Kategori</p>
-            <p class="text-3xl font-bold text-green-600 mt-2">
-              {{ totalKategori }}
-            </p>
+          <!-- Total Kategori -->
+          <div class="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center text-white text-2xl">
+              🏷️
+            </div>
+            <div>
+              <p class="text-green-500 text-sm">Total Kategori</p>
+              <p class="text-4xl font-bold text-green-600">{{ totalKategori }}</p>
+            </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow p-6">
-            <p class="text-gray-500 text-sm">🏢 Total Supplier</p>
-            <p class="text-3xl font-bold text-indigo-600 mt-2">
-              {{ totalSupplier }}
-            </p>
+          <!-- Total Supplier -->
+          <div class="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-purple-500 flex items-center justify-center text-white text-2xl">
+              🏢
+            </div>
+            <div>
+              <p class="text-purple-500 text-sm">Total Supplier</p>
+              <p class="text-4xl font-bold text-purple-600">{{ totalSupplier }}</p>
+            </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow p-6">
-            <p class="text-gray-500 text-sm">⚠️ Stok Menipis</p>
-            <p class="text-3xl font-bold text-red-500 mt-2">
-              {{ barangMenipis }}
-            </p>
+          <!-- Stok Menipis -->
+          <div class="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center text-white text-2xl">
+              ⚠️
+            </div>
+            <div>
+              <p class="text-red-500 text-sm">Stok Menipis</p>
+              <p class="text-4xl font-bold text-red-600">{{ barangMenipis }}</p>
+            </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow p-6">
-            <p class="text-gray-500 text-sm">📥 Barang Masuk Hari Ini</p>
-            <p class="text-3xl font-bold text-emerald-600 mt-2">
-              {{ barangMasukHariIni }}
-            </p>
+          <!-- Barang Masuk -->
+          <div class="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-green-600 flex items-center justify-center text-white text-2xl">
+              ⬇️
+            </div>
+            <div>
+              <p class="text-green-600 text-sm">Barang Masuk Hari Ini</p>
+              <p class="text-4xl font-bold text-green-700">{{ barangMasukHariIni }}</p>
+            </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow p-6">
-            <p class="text-gray-500 text-sm">📤 Barang Keluar Hari Ini</p>
-            <p class="text-3xl font-bold text-orange-500 mt-2">
-              {{ barangKeluarHariIni }}
-            </p>
+          <!-- Barang Keluar -->
+          <div class="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl">
+              ⬆️
+            </div>
+            <div>
+              <p class="text-orange-500 text-sm">Barang Keluar Hari Ini</p>
+              <p class="text-4xl font-bold text-orange-600">{{ barangKeluarHariIni }}</p>
+            </div>
           </div>
-
         </div>
 
-        <!-- Tabel barang stok menipis -->
-        <div class="bg-white rounded-xl shadow p-6" v-if="barangKritis.length > 0">
-          <h3 class="font-semibold text-gray-700 mb-4">⚠️ Barang Perlu Restock</h3>
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="text-left text-gray-500 border-b">
-                <th class="pb-2">Nama Barang</th>
-                <th class="pb-2">Stok</th>
-                <th class="pb-2">Minimum</th>
-                <th class="pb-2">Lokasi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="b in barangKritis" :key="b.id_barang" class="border-b last:border-0">
-                <td class="py-2 font-medium">{{ b.nama_barang }}</td>
-                <td class="py-2 text-red-500 font-bold">{{ b.stok }} {{ b.satuan }}</td>
-                <td class="py-2">{{ b.stok_minimum }} {{ b.satuan }}</td>
-                <td class="py-2 text-gray-400">{{ b.lokasi }}</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Bottom Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+
+          <!-- Barang Perlu Restock -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+
+            <div class="px-6 py-4 border-b bg-gray-50">
+              <h3 class="font-bold text-lg">
+                ⚠️ Barang Perlu Restock
+              </h3>
+            </div>
+
+            <table class="w-full text-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-4 py-3 text-left">Nama Barang</th>
+                  <th class="px-4 py-3 text-left">Stok</th>
+                  <th class="px-4 py-3 text-left">Minimum</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr v-if="barangKritis.length === 0">
+                  <td colspan="3" class="text-center py-10 text-gray-400">
+                    Tidak ada barang yang perlu direstock
+                  </td>
+                </tr>
+
+                <tr
+                  v-for="b in barangKritis"
+                  :key="b.id_barang"
+                  class="border-t"
+                >
+                  <td class="px-4 py-3">
+                    {{ b.nama_barang }}
+                  </td>
+
+                  <td class="px-4 py-3 text-red-500 font-semibold">
+                    {{ b.stok }}
+                  </td>
+
+                  <td class="px-4 py-3">
+                    {{ b.stok_minimum }}
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+
+          <!-- Aktivitas Terbaru -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+
+            <div class="px-6 py-4 border-b bg-gray-50">
+              <h3 class="font-bold text-lg">
+                📝 Aktivitas Terbaru
+              </h3>
+            </div>
+
+            <table class="w-full text-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-4 py-3 text-left">Barang</th>
+                  <th class="px-4 py-3 text-left">Jenis</th>
+                  <th class="px-4 py-3 text-left">Jumlah</th>
+                  <th class="px-4 py-3 text-left">Tanggal</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr
+                  v-for="t in transaksiTerbaru"
+                  :key="t.id_transaksi"
+                  class="border-t"
+                >
+                  <td class="px-4 py-3">
+                    {{ t.nama_barang }}
+                  </td>
+
+                  <td class="px-4 py-3">
+                    <span
+                      :class="
+                        t.jenis_transaksi === 'masuk'
+                        ? 'text-green-600'
+                        : 'text-red-600'
+                      "
+                    >
+                      {{ t.jenis_transaksi }}
+                    </span>
+                  </td>
+
+                  <td class="px-4 py-3">
+                    {{ t.jumlah }}
+                  </td>
+
+                  <td class="px-4 py-3">
+                    {{ formatTanggal(t.tanggal) }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-
-        <div class="bg-white rounded-xl shadow p-6 mt-8">
-          <h3 class="font-semibold text-gray-700 mb-4">
-            📊 Grafik Barang Perlu Restock
-          </h3>
-
-          <canvas id="restockChart"></canvas>
-        </div>
-
-        <!-- Aktivitas Terbaru -->
-        <div
-          class="bg-white rounded-xl shadow p-6 mt-8"
-          v-if="transaksiTerbaru.length">
-          <h3 class="font-semibold text-gray-700 mb-4">
-            📝 Aktivitas Terbaru
-          </h3>
-
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="border-b text-gray-500">
-                <th class="text-left py-2">Barang</th>
-                <th class="text-left py-2">Jenis</th>
-                <th class="text-left py-2">Jumlah</th>
-                <th class="text-left py-2">Tanggal</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr
-                v-for="t in transaksiTerbaru"
-                :key="t.id_transaksi"
-                class="border-b">
-                <td class="py-2">{{ t.nama_barang }}</td>
-
-                <td class="py-2">
-                  <span
-                    :class="
-                      t.jenis_transaksi === 'masuk'
-                        ? 'text-green-600 font-semibold'
-                        : 'text-red-600 font-semibold'">
-                    {{ t.jenis_transaksi }}
-                  </span>
-                </td>
-
-                <td class="py-2">
-                  {{ t.jumlah }}
-                </td>
-
-                <td class="py-2">
-                  {{ t.tanggal }}
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </main>
     </div>
@@ -207,46 +261,20 @@ const Dashboard = {
     } catch (error) {
       console.error("Dashboard error:", error);
     }
-
-    this.$nextTick(() => {
-      const ctx = document.getElementById("restockChart");
-
-      const labels = this.barangKritis.map((b) => b.nama_barang);
-      const stok = this.barangKritis.map((b) => Number(b.stok));
-      const minimum = this.barangKritis.map((b) => Number(b.stok_minimum));
-
-      new Chart(ctx, {
-        type: "bar",
-        data: {
-          labels: labels,
-          datasets: [
-            {
-              label: "Stok",
-              data: stok,
-            },
-            {
-              label: "Stok Minimum",
-              data: minimum,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: "top",
-            },
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
-    });
   },
   methods: {
+    formatTanggal(tgl) {
+      if (!tgl) return "-";
+
+      return new Date(tgl).toLocaleString("id-ID", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    },
+
     async logout() {
       try {
         await axios.post("http://localhost:8080/auth/logout");

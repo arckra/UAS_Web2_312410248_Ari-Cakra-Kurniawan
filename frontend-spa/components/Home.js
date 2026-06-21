@@ -3,7 +3,7 @@ const Home = {
     <div class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
       <!-- Navbar -->
       <nav class="bg-white shadow px-6 py-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold text-blue-700">📦 E-Inventory Warung</h1>
+        <h1 class="text-xl font-bold text-blue-700">📦 Data Warung Ari</h1>
         <router-link to="/login"
           class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-sm">
           Login Admin
@@ -45,14 +45,16 @@ const Home = {
   async mounted() {
     try {
       const [resBarang, resKategori] = await Promise.all([
-        axios.get('http://localhost:8080/barang'),
-        axios.get('http://localhost:8080/kategori'),
+        axios.get("http://localhost:8080/barang"),
+        axios.get("http://localhost:8080/kategori"),
       ]);
-      this.totalBarang   = resBarang.data.length;
+      this.totalBarang = resBarang.data.length;
       this.totalKategori = resKategori.data.length;
-      this.barangMenipis = resBarang.data.filter(b => b.stok <= b.stok_minimum).length;
+      this.barangMenipis = resBarang.data.filter(
+        (b) => b.stok <= b.stok_minimum,
+      ).length;
     } catch (e) {
-      console.error('Gagal load data publik', e);
+      console.error("Gagal load data publik", e);
     }
-  }
+  },
 };

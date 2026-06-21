@@ -4,7 +4,7 @@ const Barang = {
 
       <!-- Sidebar -->
       <aside class="fixed left-0 top-0 h-screen w-64 bg-blue-800 text-white flex flex-col py-6 px-4">
-        <h1 class="text-lg font-bold mb-8 text-center">📦 E-Inventory</h1>
+        <h1 class="text-lg font-bold mb-8 text-center">📦 Data Warung Ari</h1>
         <nav class="flex flex-col gap-2 flex-1">
           <router-link to="/dashboard" class="px-4 py-2 rounded-lg hover:bg-blue-700">🏠 Dashboard</router-link>
           <router-link to="/barang"    class="px-4 py-2 rounded-lg hover:bg-blue-700 bg-blue-700">📦 Barang</router-link>
@@ -219,7 +219,7 @@ const Barang = {
     },
     bukaModalTambah() {
       this.modalMode = "tambah";
-        
+
       this.form = {
         id_barang: null,
         id_kategori: "",
@@ -230,7 +230,7 @@ const Barang = {
         stok_minimum: 0,
         lokasi: "",
       };
-    
+
       this.showModal = true;
     },
     bukaModalEdit(item) {
