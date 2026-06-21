@@ -1,0 +1,265 @@
+ERROR - 2026-06-21 03:27:13 --> Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 5 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_kategori' in 'field list'
+[Method: PUT, Route: barang/31]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 4 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:13 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 5 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 03:27:18 --> Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 5 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_kategori' in 'field list'
+[Method: PUT, Route: barang/31]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 4 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:18 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 5 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 03:27:36 --> Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 5 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_kategori' in 'field list'
+[Method: PUT, Route: barang/31]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 4 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:27:36 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 5 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 03:28:06 --> Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 5 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:28:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_kategori' in 'field list'
+[Method: PUT, Route: barang/31]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 2 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:28:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 4 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 03:28:06 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_kategori' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `id_barang` = \'31\', `id_kategori` = \'1\', `id_supplier` = \'1\', `nama_barang` = \'mie gacoan\', `satuan` = \'pcs\', `stok` = 1000, `stok_minimum` = \'20\', `lokasi` = \'Rak C1\', `nama_kategori` = \'Makanan Instan\', `nama_supplier` = \'PT Indofood Distribusi\'
+WHERE `id_barang` = \'31\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2519): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `id_barang` = :id_barang.1:, `id_kategori` = :id_kategori:, `id_supplier` = :id_supplier:, `nama_barang` = :nama_barang:, `satuan` = :satuan:, `stok` = :stok:, `stok_minimum` = :stok_minimum:, `lokasi` = :lokasi:, `nama_kategori` = :nama_kategori:, `nama_supplier` = :nama_supplier:
+WHERE `id_barang` = :id_barang:', [...], false)
+ 5 APPPATH\Controllers\Barang.php(68): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->update('31')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 03:48:44 --> {"id_barang":"31","id_kategori":"1","id_supplier":"1","nama_barang":"mie gacoan","satuan":"pcs","stok":1000,"stok_minimum":"20","lokasi":"Rak C1","nama_kategori":"Makanan Instan","nama_supplier":"PT Indofood Distribusi"}
+ERROR - 2026-06-21 03:50:12 --> {"id_barang":"31","id_kategori":"1","id_supplier":"1","nama_barang":"mie gacoan","satuan":"pcs","stok":"1000","stok_minimum":"20","lokasi":"Rak C1","nama_kategori":"Makanan Instan","nama_supplier":"PT Indofood Distribusi"}
+ERROR - 2026-06-21 04:03:07 --> {"id_barang":"31","id_kategori":"1","id_supplier":"1","nama_barang":"mie gacoan","satuan":"pcs","stok":100,"stok_minimum":"20","lokasi":"Rak C1"}
+ERROR - 2026-06-21 04:03:16 --> {"id_barang":"31","id_kategori":"1","id_supplier":"1","nama_barang":"mie gacoan","satuan":"pcs","stok":10,"stok_minimum":"20","lokasi":"Rak C1"}
+ERROR - 2026-06-21 04:04:51 --> {"id_barang":"31","id_kategori":"1","id_supplier":"1","nama_barang":"mie gacoan","satuan":"pcs","stok":100,"stok_minimum":"20","lokasi":"Rak C1"}

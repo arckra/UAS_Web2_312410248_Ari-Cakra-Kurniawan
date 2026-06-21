@@ -1,0 +1,482 @@
+ERROR - 2026-06-18 04:24:27 --> Failed to open the referenced table 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `transaksi_barang` (
+	`id_transaksi` INT NOT NULL AUTO_INCREMENT,
+	`id_user` INT NOT NULL,
+	`id_barang` INT NOT NULL,
+	`jenis_transaksi` ENUM(\'masuk\',\'keluar\') NOT NULL,
+	`jumlah` INT NOT NULL,
+	`stok_sebelum` INT NOT NULL,
+	`stok_sesudah` INT NOT NULL,
+	`keterangan` TEXT NULL,
+	`tanggal` DATETIME NOT NULL,
+	CONSTRAINT `pk_transaksi_barang` PRIMARY KEY(`id_transaksi`),
+	CONSTRAINT `transaksi_barang_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
+	CONSTRAINT `transaksi_barang_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang`(`id_barang`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `transaksi_barang` (
+	`id_transaksi` INT NOT NULL AUTO_INCREMENT,
+	`id_user` INT NOT NULL,
+	`id_barang` INT NOT NULL,
+	`jenis_transaksi` ENUM(\'masuk\',\'keluar\') NOT NULL,
+	`jumlah` INT NOT NULL,
+	`stok_sebelum` INT NOT NULL,
+	`stok_sesudah` INT NOT NULL,
+	`keterangan` TEXT NULL,
+	`tanggal` DATETIME NOT NULL,
+	CONSTRAINT `pk_transaksi_barang` PRIMARY KEY(`id_transaksi`),
+	CONSTRAINT `transaksi_barang_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
+	CONSTRAINT `transaksi_barang_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang`(`id_barang`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `transaksi_barang` (
+	`id_transaksi` INT NOT NULL AUTO_INCREMENT,
+	`id_user` INT NOT NULL,
+	`id_barang` INT NOT NULL,
+	`jenis_transaksi` ENUM(\'masuk\',\'keluar\') NOT NULL,
+	`jumlah` INT NOT NULL,
+	`stok_sebelum` INT NOT NULL,
+	`stok_sesudah` INT NOT NULL,
+	`keterangan` TEXT NULL,
+	`tanggal` DATETIME NOT NULL,
+	CONSTRAINT `pk_transaksi_barang` PRIMARY KEY(`id_transaksi`),
+	CONSTRAINT `transaksi_barang_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
+	CONSTRAINT `transaksi_barang_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang`(`id_barang`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `transaksi_barang` (
+	`id_transaksi` INT NOT NULL AUTO_INCREMENT,
+	`id_user` INT NOT NULL,
+	`id_barang` INT NOT NULL,
+	`jenis_transaksi` ENUM(\'masuk\',\'keluar\') NOT NULL,
+	`jumlah` INT NOT NULL,
+	`stok_sebelum` INT NOT NULL,
+	`stok_sesudah` INT NOT NULL,
+	`keterangan` TEXT NULL,
+	`tanggal` DATETIME NOT NULL,
+	CONSTRAINT `pk_transaksi_barang` PRIMARY KEY(`id_transaksi`),
+	CONSTRAINT `transaksi_barang_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
+	CONSTRAINT `transaksi_barang_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang`(`id_barang`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-06-18-042140_CreateTransaksiBarangTable.php(25): CodeIgniter\Database\Forge->createTable('transaksi_barang')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateTransaksiBarangTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-06-18 04:26:35 --> Failed to open the referenced table 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `transaksi_barang` (
+	`id_transaksi` INT NOT NULL AUTO_INCREMENT,
+	`id_user` INT NOT NULL,
+	`id_barang` INT NOT NULL,
+	`jenis_transaksi` ENUM(\'masuk\',\'keluar\') NOT NULL,
+	`jumlah` INT NOT NULL,
+	`stok_sebelum` INT NOT NULL,
+	`stok_sesudah` INT NOT NULL,
+	`keterangan` TEXT NULL,
+	`tanggal` DATETIME NOT NULL,
+	CONSTRAINT `pk_transaksi_barang` PRIMARY KEY(`id_transaksi`),
+	CONSTRAINT `transaksi_barang_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
+	CONSTRAINT `transaksi_barang_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang`(`id_barang`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `transaksi_barang` (
+	`id_transaksi` INT NOT NULL AUTO_INCREMENT,
+	`id_user` INT NOT NULL,
+	`id_barang` INT NOT NULL,
+	`jenis_transaksi` ENUM(\'masuk\',\'keluar\') NOT NULL,
+	`jumlah` INT NOT NULL,
+	`stok_sebelum` INT NOT NULL,
+	`stok_sesudah` INT NOT NULL,
+	`keterangan` TEXT NULL,
+	`tanggal` DATETIME NOT NULL,
+	CONSTRAINT `pk_transaksi_barang` PRIMARY KEY(`id_transaksi`),
+	CONSTRAINT `transaksi_barang_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
+	CONSTRAINT `transaksi_barang_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang`(`id_barang`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `transaksi_barang` (
+	`id_transaksi` INT NOT NULL AUTO_INCREMENT,
+	`id_user` INT NOT NULL,
+	`id_barang` INT NOT NULL,
+	`jenis_transaksi` ENUM(\'masuk\',\'keluar\') NOT NULL,
+	`jumlah` INT NOT NULL,
+	`stok_sebelum` INT NOT NULL,
+	`stok_sesudah` INT NOT NULL,
+	`keterangan` TEXT NULL,
+	`tanggal` DATETIME NOT NULL,
+	CONSTRAINT `pk_transaksi_barang` PRIMARY KEY(`id_transaksi`),
+	CONSTRAINT `transaksi_barang_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
+	CONSTRAINT `transaksi_barang_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang`(`id_barang`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `transaksi_barang` (
+	`id_transaksi` INT NOT NULL AUTO_INCREMENT,
+	`id_user` INT NOT NULL,
+	`id_barang` INT NOT NULL,
+	`jenis_transaksi` ENUM(\'masuk\',\'keluar\') NOT NULL,
+	`jumlah` INT NOT NULL,
+	`stok_sebelum` INT NOT NULL,
+	`stok_sesudah` INT NOT NULL,
+	`keterangan` TEXT NULL,
+	`tanggal` DATETIME NOT NULL,
+	CONSTRAINT `pk_transaksi_barang` PRIMARY KEY(`id_transaksi`),
+	CONSTRAINT `transaksi_barang_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
+	CONSTRAINT `transaksi_barang_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang`(`id_barang`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-06-18-042140_CreateTransaksiBarangTable.php(25): CodeIgniter\Database\Forge->createTable('transaksi_barang')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateTransaksiBarangTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-06-18 04:28:24 --> Table 'kategori' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `kategori` (
+	`id_kategori` INT NOT NULL AUTO_INCREMENT,
+	`nama_kategori` VARCHAR(100) NOT NULL,
+	`deskripsi` TEXT NULL,
+	CONSTRAINT `pk_kategori` PRIMARY KEY(`id_kategori`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `kategori` (
+	`id_kategori` INT NOT NULL AUTO_INCREMENT,
+	`nama_kategori` VARCHAR(100) NOT NULL,
+	`deskripsi` TEXT NULL,
+	CONSTRAINT `pk_kategori` PRIMARY KEY(`id_kategori`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `kategori` (
+	`id_kategori` INT NOT NULL AUTO_INCREMENT,
+	`nama_kategori` VARCHAR(100) NOT NULL,
+	`deskripsi` TEXT NULL,
+	CONSTRAINT `pk_kategori` PRIMARY KEY(`id_kategori`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `kategori` (
+	`id_kategori` INT NOT NULL AUTO_INCREMENT,
+	`nama_kategori` VARCHAR(100) NOT NULL,
+	`deskripsi` TEXT NULL,
+	CONSTRAINT `pk_kategori` PRIMARY KEY(`id_kategori`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-06-18-042033_CreateKategoriTable.php(17): CodeIgniter\Database\Forge->createTable('kategori')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateKategoriTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-06-18 04:37:30 --> CodeIgniter\Filters\Exceptions\FilterException: "authfilter" filter must have a matching alias defined.
+[Method: POST, Route: barang]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('authfilter')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('authfilter', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(476): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:38:26 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: POST, Route: barang]
+in SYSTEMPATH\Filters\Filters.php on line 299.
+ 1 SYSTEMPATH\Filters\Filters.php(239): CodeIgniter\Filters\Filters->createFilter('App\\Filters\\AuthFilter')
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('barang', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+ERROR - 2026-06-18 04:42:10 --> Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 5 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:42:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+[Method: POST, Route: barang]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 2 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:42:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 4 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:42:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 5 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+ERROR - 2026-06-18 04:42:55 --> Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 5 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:42:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+[Method: POST, Route: barang]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 2 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:42:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 4 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:42:55 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 5 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+ERROR - 2026-06-18 04:43:26 --> Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 5 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:43:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+[Method: POST, Route: barang]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 2 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:43:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 4 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 04:43:26 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_inventory`.`barang`, CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`nama_barang`) VALUES (\'Test\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`nama_barang`) VALUES (:nama_barang:)', [...], false)
+ 5 APPPATH\Controllers\Barang.php(48): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Barang->create()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:20:30 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: OPTIONS, Route: auth/login]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:20:33 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: OPTIONS, Route: auth/login]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:20:34 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: OPTIONS, Route: auth/login]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:22:21 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: POST, Route: auth/login]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:24:04 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: POST, Route: auth/login]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:24:06 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: POST, Route: auth/login]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:24:07 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: POST, Route: auth/login]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:24:41 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: GET, Route: /]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-18 05:25:53 --> ErrorException: Undefined property: Config\Cors::$default
+[Method: POST, Route: auth/login]
+in SYSTEMPATH\HTTP\Cors.php on line 72.
+ 1 SYSTEMPATH\HTTP\Cors.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Cors::$default', 'F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\system\\HTTP\\Cors.php', 72)
+ 2 SYSTEMPATH\Filters\Cors.php(94): CodeIgniter\HTTP\Cors::factory()
+ 3 SYSTEMPATH\Filters\Cors.php(59): CodeIgniter\Filters\Cors->createCorsService(null)
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\Cors->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(70): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\ALL\\laragon\\www\\projek-uas\\backend-api\\public\\index.php')

@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.ignoreFiles": [
+    "**/backend-api/writable/**",
+    "**/backend-api/tests/**",
+    "**/.git/**"
+  ]
+}
