@@ -25,7 +25,41 @@ class AuthFilter implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        //
+        $authHeader = $request->getHeaderLine('Authorization');
+
+        // ❌ kalau tidak ada token → 401
+        if (!$authHeader) {
+            return service('response')->setJSON([
+                'status' => 401,
+                'error' => 'Unauthorized',
+                'message' => 'Token tidak ditemukan'
+            ])->setStatusCode(401);
+        }
+
+        $token = explode(" ", $authHeader);
+
+        // ❌ format salah
+        if (count($token) !== 2) {
+            return service('response')->setJSON([
+                'status' => 401,
+                'error' => 'Unauthorized',
+                'message' => 'Format token salah (Bearer token)'
+            ])->setStatusCode(401);
+        }
+
+        // ❌ token kosong
+        if ($token[1] == "") {
+            return service('response')->setJSON([
+                'message' => 'Token kosong'
+            ])->setStatusCode(401);
+        }
+
+        // (kalau kamu sudah pakai JWT decode, baru tambahkan di sini)
+    }
+
+    public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
+    {
+        // tidak dipakai
     }
 
     /**
@@ -40,8 +74,4 @@ class AuthFilter implements FilterInterface
      *
      * @return ResponseInterface|void
      */
-    public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
-    {
-        //
-    }
 }
