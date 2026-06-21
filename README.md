@@ -79,7 +79,7 @@ Pastikan kamu sudah menginstal:
 
 ```bash
 # 1. Clone repositori ini
-git clone https://github.com/[username-kamu]/[nama-repo].git
+git clone https://github.com/arckra/UAS_Web2_312410248_Ari-Cakra-Kurniawan.git
 cd [nama-repo]/backend
 
 # 2. Install dependency PHP
