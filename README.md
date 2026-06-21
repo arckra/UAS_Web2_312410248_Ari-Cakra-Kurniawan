@@ -32,8 +32,8 @@ Selama ini, pencatatan stok di [nama warung] masih dilakukan secara manual mengg
 
 Berikut adalah relasi antar tabel database pada proyek ini, didesain menggunakan fitur **Designer** di phpMyAdmin:
 
-![Skema Relasi Database](<img width="851" height="600" alt="image" src="https://github.com/user-attachments/assets/4df7558b-a175-43ea-90ea-41615ff17ed1" />
-)
+<img width="851" height="600" alt="image" src="https://github.com/user-attachments/assets/4df7558b-a175-43ea-90ea-41615ff17ed1" />
+
 
 > *Tabel yang terlibat: `users`, `products`, `categories`, `suppliers`, `stock_in`, `stock_out` (sesuaikan dengan tabel yang kamu buat)*
 
@@ -43,8 +43,8 @@ Berikut adalah relasi antar tabel database pada proyek ini, didesain menggunakan
 
 Endpoint API pada proyek ini diproteksi menggunakan **JWT Bearer Token**. Berikut adalah hasil percobaan mengakses endpoint tanpa menyertakan token melalui Postman:
 
-![Error 401 Unauthorized](<img width="1708" height="784" alt="image" src="https://github.com/user-attachments/assets/b141f808-b31d-42b7-b55a-51947b39a025" />
-)
+<img width="1708" height="784" alt="image" src="https://github.com/user-attachments/assets/b141f808-b31d-42b7-b55a-51947b39a025" />
+
 
 > **Request:** `GET /api/products` tanpa header `Authorization: Bearer <token>`
 > **Response:** `401 Unauthorized` — akses ditolak karena token tidak ditemukan.
@@ -54,20 +54,20 @@ Endpoint API pada proyek ini diproteksi menggunakan **JWT Bearer Token**. Beriku
 ## 🖥️ Screenshot Antarmuka Aplikasi
 
 ### Halaman Login
-![Halaman Login](<img width="923" height="648" alt="image" src="https://github.com/user-attachments/assets/0032f049-9b1f-46ca-bf92-4f335ea94721" />
-)
+<img width="923" height="648" alt="image" src="https://github.com/user-attachments/assets/0032f049-9b1f-46ca-bf92-4f335ea94721" />
+
 
 ### Dashboard Admin
-![Dashboard Admin](<img width="1899" height="895" alt="image" src="https://github.com/user-attachments/assets/d20b6a5b-481c-4158-9adb-d25d4bd37759" />
-)
+<img width="1899" height="895" alt="image" src="https://github.com/user-attachments/assets/d20b6a5b-481c-4158-9adb-d25d4bd37759" />
+
 
 ### Form Modal Tambah / Edit Data
-![Form Modal](<img width="783" height="717" alt="image" src="https://github.com/user-attachments/assets/5b53d4b2-3cab-4f07-aa3f-7ef6618e1deb" />
-)
+<img width="783" height="717" alt="image" src="https://github.com/user-attachments/assets/5b53d4b2-3cab-4f07-aa3f-7ef6618e1deb" />
+
 
 ### Tabel Data dengan TailwindCSS
-![Tabel Data](<img width="1617" height="558" alt="image" src="https://github.com/user-attachments/assets/0002377d-18cf-47d3-bd3a-7482cabd1ede" />
-)
+<img width="1617" height="558" alt="image" src="https://github.com/user-attachments/assets/0002377d-18cf-47d3-bd3a-7482cabd1ede" />
+
 
 ---
 
@@ -86,7 +86,7 @@ Pastikan kamu sudah menginstal:
 ```bash
 # 1. Clone repositori ini
 git clone https://github.com/arckra/UAS_Web2_312410248_Ari-Cakra-Kurniawan.git
-cd [nama-repo]/backend
+cd project-uas/backend-api
 
 # 2. Install dependency PHP
 composer install
@@ -120,7 +120,7 @@ php spark serve
 
 ```bash
 # 1. Masuk ke folder frontend
-cd ../frontend
+cd project-uas/frontend-spa
 
 # 2. Install dependency Node
 npm install
